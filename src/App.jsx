@@ -47,7 +47,11 @@ export default defineComponent({
     })
 
     return () => (
-      <ElTable ref={el => (table.value.ref = el)} data={table.value.data}>
+      <ElTable
+        ref={el => (table.value.ref = el)}
+        data={table.value.data}
+        rowKey='name'
+      >
         <ElTableColumn prop='date' label='Date' width='180' />
         <ElTableColumn prop='name' label='Name' width='180' />
         <ElTableColumn prop='address' label='Address' />
